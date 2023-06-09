@@ -19,7 +19,7 @@ C = Type of the chunk
 D = The data
 ```
 
-Layout for the level string: `C1;<stride>;<title|desc>;<chunks in base64 format>`
+Layout for the level string: `C1;<width>;<height>;<title|desc>;<chunks in base64 format>`
 Title and description must be escaped of | and ; bcs ; is used as the seperator for the level string stuffs and | is used to sepereate the title and desc
 
 ---
