@@ -1,6 +1,9 @@
 # Specification for level type C1 `v0.0.1`
 
 ### Layout
+Layout for the level string: `C1;<width>;<height>;<title|desc>;<chunks in base64 format>`
+Title and description must be escaped of | and ; bcs ; is used as the seperator for the level string stuffs and | is used to sepereate the title and desc
+
 Layout for a chunk/cell: `ERRPTTTT`<br>
 ```
 E = The next chunk is a "extra chunks" (can be used to store extra data like cell types or whatever). If its not set then just add the cell to the grid
@@ -18,10 +21,6 @@ C = Type of the chunk
         If its 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`
 D = The data
 ```
-
-Layout for the level string: `C1;<width>;<height>;<title|desc>;<chunks in base64 format>`
-Title and description must be escaped of | and ; bcs ; is used as the seperator for the level string stuffs and | is used to sepereate the title and desc
-
 ---
 ###  Supported cell types
 ```
@@ -39,8 +38,8 @@ Title and description must be escaped of | and ; bcs ; is used as the seperator 
 [1000] Enemy
 [1001] Trash
 
-(1010) Disabler
-(1011) Unknown (When exporting from a remake that has more cells you can use this for cells that arent here)
+(1010) Disabler (indev)
+(1011) Unknown (When exporting from a remake that has more cells you can use this for cells that arent saveable)
 (other) Perhaps
 ```
 
