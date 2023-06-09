@@ -1,7 +1,7 @@
 # Specification for level type C1 `v0.0.1`
 
 ### Layout
-Layout for a chunk: `ERRPTTTT`<br>
+Layout for a chunk/cell: `ERRPTTTT`<br>
 E = The next chunk is a "extra chunks" (can be used to store extra data like cell types or whatever)<br>
 R = Rotation<br>
 P = Placeable<br>
