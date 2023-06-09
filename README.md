@@ -2,14 +2,17 @@
 
 ### Layout
 Layout for a chunk(1 char is a bit): `ERRPTTTT`<br>
-E = Every chunk after this chunk until the E bit is set in anouther chunk are used as "extra chunks" (can be used to store extra data like cell types or whatever)<br>
+E = The next chunk is a "extra chunks" (can be used to store extra data like cell types or whatever)<br>
 R = Rotation<br>
 P = Placeable<br>
 T = Type<br>
 
-Layout for a "extra chunk": `ECCDDDDD`<br>
-E = The end of the chunks
-C = Type of the chunk(if its 0 use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))` else idk yet)<br>
+Layout for a "extra chunk": `CCCDDDDD`<br>
+C = Type of the chunk
+    If its 0b00: repeat the previos cell using the D
+    If its 0b01: TODO (prob some sort of compression)
+    If its 0b10: TODO
+    If its 0b11: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`<br>
 D = The data<br>
 
 Layout for the level string: `C1;<stride>;<title|desc>;<chunks in base64 format>`
