@@ -43,4 +43,5 @@ D = The data
 (other) Perhaps
 ```
 
-Example implementation: TODO
+### Implementations
+Example: TODO
