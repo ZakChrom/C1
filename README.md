@@ -28,6 +28,7 @@ D = The data
 [] means the default cells
 () means special things
 
+ TTTT  Name
 [0000] Empty
 [0001] Generator
 [0010] Mover
