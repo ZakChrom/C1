@@ -17,6 +17,9 @@ Title and description must be escaped of | and ; bcs ; is used as the seperator 
 ---
 ###  Supported cell types
 ```
+[] means the default cells
+() means special things
+
 [0000] Empty
 [0001] Generator
 [0010] Mover
@@ -32,3 +35,5 @@ Title and description must be escaped of | and ; bcs ; is used as the seperator 
 (1011) Unknown (When exporting from a remake that has more cells you can use this for cells that arent here)
 (other) Perhaps
 ```
+
+Example implementation: TODO
