@@ -14,10 +14,11 @@ T = Type
 Layout for a "extra chunk": `CCCDDDDD`<br>
 ```
 C = Type of the chunk
-    If the 0b100 bit is set:
-        If its 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`
+    c = CCC&0b11
+    if CCC&0b100 is set:
+        if c is 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`
         TODO
-    Else:
+    else:
         TODO (prob some compression things)
 D = The data
 ```
