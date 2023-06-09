@@ -2,7 +2,7 @@
 
 ### Layout
 Layout for a chunk/cell: `ERRPTTTT`<br>
-E = The next chunk is a "extra chunks" (can be used to store extra data like cell types or whatever)<br>
+E = The next chunk is a "extra chunks" (can be used to store extra data like cell types or whatever). If its not set then just add the cell to the grid<br>
 R = Rotation<br>
 P = Placeable<br>
 T = Type<br>
