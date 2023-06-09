@@ -8,14 +8,15 @@ P = Placeable<br>
 T = Type<br>
 
 Layout for a "extra chunk": `CCCDDDDD`<br>
+```
 C = Type of the chunk<br>
-If the 0b100 bit isnt set:
-If its 0b01: TODO (prob some sort of compression)<br>
-If its 0b10: TODO<br>
-Else:
-If its 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`<br>
-
+    If the 0b100 bit isnt set:
+        If its 0b01: TODO (prob some sort of compression)<br>
+        If its 0b10: TODO<br>
+    Else:
+        If its 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`<br>
 D = The data<br>
+```
 
 Layout for the level string: `C1;<stride>;<title|desc>;<chunks in base64 format>`
 Title and description must be escaped of | and ; bcs ; is used as the seperator for the level string stuffs and | is used to sepereate the title and desc
