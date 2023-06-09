@@ -9,10 +9,11 @@ T = Type<br>
 
 Layout for a "extra chunk": `CCCDDDDD`<br>
 C = Type of the chunk<br>
-- If its 0b00: repeat the previous cell using the D<br>
-- If its 0b01: TODO (prob some sort of compression)<br>
-- If its 0b10: TODO<br>
-- If its 0b11: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`<br>
+If the 0b100 bit isnt set:
+If its 0b01: TODO (prob some sort of compression)<br>
+If its 0b10: TODO<br>
+Else:
+If its 0b00: use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))`<br>
 
 D = The data<br>
 
