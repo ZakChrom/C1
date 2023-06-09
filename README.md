@@ -8,6 +8,7 @@ P = Placeable<br>
 T = Type<br>
 
 Layout for a "extra chunk": `ECCDDDDD`<br>
+E = The end of the chunks
 C = Type of the chunk(if its 0 use the data to extend the cell types `(((prevchunk&0b1111)<<4)|(thischunk&0b1111))` else idk yet)<br>
 D = The data<br>
 
