@@ -1,8 +1,8 @@
 # Specification for level type C1 `v0.0.1`
 
 ### Layout
-Layout for the level string: `C1;<title|desc>;<width>;<height>;<chunks in base64 format>`<br>
-Title and description must be escaped of | and ; bcs ; is used as the seperator for the level string stuffs and | is used to sepereate the title and desc
+Layout for the level string: `C1;<title>;<desc>;<width>;<height>;<chunks in base64 format>`<br>
+Title and description must be escaped of ; bcs ; is used as the seperator for the level string stuffs
 
 Layout for a chunk/cell: `ERRPTTTT`<br>
 ```
